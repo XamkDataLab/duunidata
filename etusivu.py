@@ -13,7 +13,7 @@ company_counts = filtered_df['company'].value_counts().reset_index()
 company_counts.columns = ['company', 'count']
 top_companies = company_counts.sort_values(by='count', ascending=False).head(20)
 
-fig = px.bar(top_companies, y='company', x='count', orientation='h', title='Top 20 Companies in Selected Category')
+fig = px.bar(top_companies, y='company', x='count', orientation='h')
 
 fig.update_layout(
     yaxis={'categoryorder':'total ascending'},
