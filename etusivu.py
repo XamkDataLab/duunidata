@@ -5,7 +5,7 @@ from queries import *
 
 # Load the dataframe
 df = get_duuni_data()
-st.DataFrame(df)
+#st.DataFrame(df)
 # Sidebar for category selection
 category = st.sidebar.selectbox('Select a Category', df['category'].unique())
 
