@@ -1,3 +1,4 @@
 pyodbc
 plotly
 matplotlib
+wordcloud
