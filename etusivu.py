@@ -21,6 +21,6 @@ fig.update_layout(
     xaxis_title="Frequency",
     font=dict(size=10) # Adjust font size here
 )
-st.plotly_chart(fig, use_container_width=True, height=1200) # Adjust height as needed
+st.plotly_chart(fig, use_container_width=True, height=2200) # Adjust height as needed
 
 
