@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
 from queries import *
 
 df = get_duuni_data()
@@ -29,4 +31,12 @@ chart_height = bar_height * total_bars
 
 st.plotly_chart(fig, use_container_width=True, height=chart_height)
 
+titles = filtered_df['title'].dropna()
+text = ' '.join(titles)
+wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
 
+# Display the word cloud using matplotlib
+fig, ax = plt.subplots()
+ax.imshow(wordcloud, interpolation='bilinear')
+ax.axis('off')
+st.pyplot(fig)
